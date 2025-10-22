@@ -46,11 +46,23 @@ ul {
 
 img {
     width: 100%;
+    border: none;
+    border-radius: 0.3rem;
 }
 
 /* ************** SECTIONS ************** */
 
 /* HEADER */
+
+.header-section {
+    background-image: url(images/headerbg.avif);
+    background-size: cover;
+    background-position: left 0% top 30%;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    color: white;
+    padding: 15rem 2rem 2rem; 
+}
 
 .nav {
     display: flex;
@@ -59,16 +71,16 @@ img {
     background-color: white;
 }
 
-.nav-a {
-    font-size: 1.4rem;
-    color: #0e0e0e;
-    font-weight: 500;
-}
-
 .nav-links {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+}
+
+.nav-a {
+    font-size: 1.4rem;
+    color: #0e0e0e;
+    font-weight: 500;
 }
 
 .logo {
@@ -81,20 +93,9 @@ i {
     font-size: 1.7rem;
 }
 
-.header-section {
-    padding: 4rem 2rem; 
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+.header-paragraph, .header-heading {
+    margin-bottom: 1rem;
 }
-
-.header-section-img, .grid-item img {
-    aspect-ratio: 16 / 11;
-    object-fit: cover;
-    border: none;
-    border-radius: 0.3rem;
-}
-
 
 /* MAIN */
 
@@ -112,6 +113,8 @@ i {
 
 .grid-item img {
     margin-bottom: 0.5em;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
 }
 
 .view-more {
@@ -121,10 +124,6 @@ i {
     text-align: center;
     display: block;
     margin-bottom: 3rem;
-}
-
-.grid-heading {
-    text-align: center;
 }
 
 /* FOOTER */
@@ -153,6 +152,10 @@ footer {
 
     html {
         font-size: 70%;
+    }
+
+    .header-section {
+        padding: 30rem 5rem 5rem;
     }
 
     .header-section div {
