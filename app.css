@@ -1,0 +1,166 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 10px / 16px = 0.625rem = 62.5% */
+}
+
+body {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size:  3.2rem;
+    word-spacing: -5px;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+p, a {
+    font-size: 1.7rem;
+}
+
+p {
+    letter-spacing: -0.3px;
+    font-weight: 500;
+    word-spacing: -2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* ************** SECTIONS ************** */
+
+/* HEADER */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: white;
+}
+
+.nav-a {
+    font-size: 1.4rem;
+    color: #0e0e0e;
+    font-weight: 500;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo {
+    font-weight: 700;
+    word-spacing: -3.5px;
+    letter-spacing: -0.8px;
+}
+
+i {
+    font-size: 1.7rem;
+}
+
+.header-section {
+    padding: 4rem 2rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.header-section-img, .grid-item img {
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+
+/* MAIN */
+
+.grid-container {
+    padding: 3rem 2rem;
+    display: grid;
+    gap: 4rem;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.grid-item img {
+    margin-bottom: 0.5em;
+}
+
+.view-more {
+    text-decoration: underline;
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.grid-heading {
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 2rem 3rem;
+    background-color: #202020;
+}
+
+.footer-heading, .footer-paragraph {
+    color: white;
+}
+
+.footer-heading {
+    font-size: 1.4rem;
+    word-spacing: -2px;
+}
+
+.footer-paragraph {
+    font-size: 1.3rem;
+}
+
+
+@media (min-width: 860px) {
+
+    html {
+        font-size: 70%;
+    }
+
+    .header-section div {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
